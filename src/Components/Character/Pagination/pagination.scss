@@ -1,0 +1,10 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    &__num{
+        &:hover{
+            color: #00f;
+        }
+        cursor: pointer;
+    }
+}

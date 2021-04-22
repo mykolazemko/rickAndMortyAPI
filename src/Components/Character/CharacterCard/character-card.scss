@@ -1,0 +1,12 @@
+.character-card{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    &__avatar{
+        margin: 20px;
+        width: 300px;
+    }
+    &__info{
+        width: 300px;
+    }
+}

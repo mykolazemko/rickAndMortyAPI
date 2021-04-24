@@ -13,7 +13,7 @@ const CharacterCard = ({ characterId, url }) => {
     }, [character]);    
     return (
         <div className="character-card">
-            <img className="character-card__avatar" src={character.image} />
+            <img alt='' className="character-card__avatar" src={character.image} />
             <span className="character-card__info">
                 <p><b>name:</b> {character.name}</p>
                 <p><b>id:</b> {character.id}</p>

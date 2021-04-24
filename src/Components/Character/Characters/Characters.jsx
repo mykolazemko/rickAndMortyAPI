@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './characters.scss'
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const Characters = ({ character, ...props }) => {
     let name = character.map((ch) =>
         <Link style={{ textDecoration: 'none' }} onClick={() => handleClick(ch.id)} to={`/${ch.id}`}>
             <div className="char-card" key={ch.id}>
-                <img className="char-card__avatar" src={ch.image} />
+                <img alt='' className="char-card__avatar" src={ch.image} />
                 <p className="char-card__name">{ch.name}</p>
             </div>
         </Link>

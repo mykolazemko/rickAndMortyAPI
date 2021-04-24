@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Characters from './Characters/Characters'
 import Pagination from './Pagination/Pagination';
 import CharacterCard from './CharacterCard/CharacterCard'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {Switch, Route } from 'react-router-dom';
 import './character.scss'
 
 const Character = (props) => {

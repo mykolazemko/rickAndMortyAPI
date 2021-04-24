@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import './pagination.scss'
 
 const Pagination = ({ page, pageCount, ...props }) => {
@@ -11,7 +10,7 @@ const Pagination = ({ page, pageCount, ...props }) => {
         return (
             list.map(num => {
                 return <span onClick={() => handleClick(num) } className="pagination__num">
-                    {num==page
+                    {num===page
                     ? <b>{`${num}`}&ensp;</b>
                     : <span>{`${num}`}&ensp;</span>
                     }

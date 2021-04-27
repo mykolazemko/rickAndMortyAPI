@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import store from '../../Store/store';
+import { observer } from 'mobx-react';
 import Characters from './Characters/Characters'
 import Pagination from './Pagination/Pagination';
 import CharacterCard from './CharacterCard/CharacterCard'
 import {Switch, Route } from 'react-router-dom';
 import './character.scss'
 
-const Character = (props) => {
+const Character = observer ((props) => {
+    const { url } = store;
+
     const [character, setCharacter] = useState([])
     const [pageCount, setPageCount] = useState(0)
     const [characterId, setCharacterId] = useState(1)
     const [page, setPage] = useState(1)
-    const url = 'http://rickandmortyapi.com/api/character'
    
     const getCharacter = async () => {
         let r = await fetch(`${url}?page=${page}`)
@@ -51,6 +54,6 @@ const Character = (props) => {
         </div>
 
     )
-}
+})
 
 export default Character

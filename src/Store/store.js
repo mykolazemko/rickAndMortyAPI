@@ -19,7 +19,6 @@ class state {
         this.character = await api.results;
         console.log(api.results)
         console.log(this.character)
-
     }
 }
 
